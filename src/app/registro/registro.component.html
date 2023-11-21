@@ -1,0 +1,19 @@
+<!-- registro.component.html -->
+<app-header></app-header>
+<section class="section">
+    <!-- imagen de prueba -->
+    <img src="https://cdn1.iconfinder.com/data/icons/ecommerce-479/402/Ecommerce_Icon_11-512.png" alt="logo" class="img_logo">
+
+    <h1 class="title">Registrar Usuario</h1>
+
+    <!-- inputs -->
+    <form class="form" (ngSubmit)="registrarPersona()">
+        <!-- usuario -->
+        <input type="text" placeholder="Usuario" [(ngModel)]="nombre" name="nombre">
+        <!-- contra -->
+        <input type="password" placeholder="Contraseña" [(ngModel)]="password" name="password">
+        <!-- btn iniciar -->
+        <button type="submit">Registrar Persona</button>
+    </form>
+</section>
+<app-footer></app-footer>

@@ -1,0 +1,8 @@
+.custom-header {
+    background-color: rgb(99, 122, 202); /* Un tono más claro de azul */
+    color: #fff;
+    padding: 15px;
+    text-align: left; /* Alinear el texto a la izquierda */
+    padding-left: 10px; /* Agregar espacio a la izquierda */
+    font-size: 14px; /* Tamaño del texto */
+}

@@ -1,0 +1,23 @@
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el texto del footer */
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Estilos para el enlace del footer */
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}

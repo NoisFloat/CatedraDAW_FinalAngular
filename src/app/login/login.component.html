@@ -1,0 +1,39 @@
+<app-header></app-header>
+<section class="section">
+  <!-- imagen de prueba -->
+  <img
+    src="https://cdn1.iconfinder.com/data/icons/ecommerce-479/402/Ecommerce_Icon_11-512.png"
+    alt="logo"
+    class="img_logo"
+  />
+
+  <h1 class="title">La bodeguita S.A de C.V</h1>
+
+  <!-- inputs -->
+  <form (ngSubmit)="verificarSesion()">
+    <!-- usuario -->
+    <input
+      type="text"
+      placeholder="Usuario"
+      [(ngModel)]="nombre"
+      name="nombre"
+    />
+    <!-- contra -->
+    <input
+      type="password"
+      placeholder="Contraseña"
+      [(ngModel)]="password"
+      name="password"
+    />
+    <!-- btn iniciar -->
+    <button
+      type="submit"
+      class="btnSesion"
+      id="iniciarSesionButton"
+      [disabled]="!verificarSesion()"
+    >
+      Iniciar Sesión
+    </button>
+  </form>
+</section>
+<app-footer></app-footer>
