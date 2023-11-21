@@ -1,6 +1,6 @@
 <!-- nombre-del-componente.component.html -->
-
-<form (submit)="registrarProducto()" class="formulario-bootstrap" style="background-color: #8a2be2; padding: 20px; border-radius: 10px;">
+<app-header></app-header>
+<form (submit)="registrarProducto()" class="container mt-4">
   <div class="form-group">
     <label for="producto">Producto:</label>
     <input
@@ -26,27 +26,30 @@
   </div>
 
   <div class="form-group">
-    <label for="cantidadVendidas">Cant. Vendidas:</label>
-    <input
-      type="number"
-      id="cantidadVendidas"
-      name="cantidadVendidas"
+    <label for="descripcion">Descripción:</label>
+    <textarea
+      id="descripcion"
+      name="descripcion"
       [(ngModel)]="descripcion"
+      required
+      class="form-control"
+    ></textarea>
+  </div>
+  <div class="form-group">
+    <label for="producto">Categoria</label>
+    <input
+      type="text"
+      id="producto"
+      name="producto"
+      [(ngModel)]="categoria"
       required
       class="form-control"
     />
   </div>
 
-  <div class="form-group">
-    <label for="descripcion">Descripción:</label>
-    <textarea
-      id="descripcion"
-      name="descripcion"
-      [(ngModel)]="categoria"
-      required
-      class="form-control"
-    ></textarea>
-  </div>
+  <button type="submit" class="btn btn-primary my-5">Agregar Producto</button>
+  <a routerLink="/tablaProducto" class="btn btn-primary my-5">Regresar a la lista</a>
 
-  <button type="submit" class="btn btn-primary">Agregar Producto</button>
 </form>
+
+<app-footer></app-footer>
