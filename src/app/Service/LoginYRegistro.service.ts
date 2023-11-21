@@ -35,7 +35,7 @@ export class Login_RegistroService {
     }
     verificarLogin(nombreL: string, passwordL: string): boolean {
         // Utilizamos find para buscar una coincidencia en el arreglo
-        const personaEncontrada = this.personas.find(e => e.nombre == nombreL || e.password == passwordL);
+        const personaEncontrada = this.personas.find(e => e.nombre == nombreL && e.password == passwordL);
     
         // Devolvemos true si se encuentra una coincidencia, de lo contrario, false
         return personaEncontrada !== undefined;
