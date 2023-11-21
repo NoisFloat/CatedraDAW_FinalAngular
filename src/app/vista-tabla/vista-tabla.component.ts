@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class VistaTablaComponent {
   productos: ProductoModelo[] = [];
- constructor(productoService:ProductoService){
+ constructor(productoService:ProductoService,private router: Router){
   this.productos = productoService.productos;
  
   
@@ -19,8 +19,11 @@ export class VistaTablaComponent {
  excelService:ExcelService = new ExcelService();
  exportToExcel(): void {
   this.excelService.exportToExcel(this.productos, 'productos');
-
+  this.router.navigate(['.'])
   
+}
+reloadPage() {
+  location.reload();
 }
 
 }
