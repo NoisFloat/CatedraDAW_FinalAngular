@@ -11,6 +11,8 @@ import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
 import { Login_RegistroService } from './Service/LoginYRegistro.service';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { VistaTablaComponent } from './vista-tabla/vista-tabla.component';
+import { FormularioProductoComponent } from './formulario-producto/formulario-producto.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     HeaderComponent,
     LoginComponent,
     RegistroComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    VistaTablaComponent,
+    FormularioProductoComponent
   ],
   imports: [
     BrowserModule,
