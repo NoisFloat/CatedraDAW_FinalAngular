@@ -30,7 +30,7 @@ export class LoginComponent {
     const sesionExitosa = this.verificarSesion();
 
     if (sesionExitosa) {
-      this.router.navigate(['/registro']);
+      this.router.navigate(['/tablaProducto']);
     } else {
       this.router.navigate(['/ruta-no-exitosa']);
     }

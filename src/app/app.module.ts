@@ -13,6 +13,7 @@ import { Login_RegistroService } from './Service/LoginYRegistro.service';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { VistaTablaComponent } from './vista-tabla/vista-tabla.component';
 import { FormularioProductoComponent } from './formulario-producto/formulario-producto.component';
+import { ProductoService } from './Service/producto.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { FormularioProductoComponent } from './formulario-producto/formulario-pr
     AppRoutingModule,
     FormsModule
   ],
-  providers: [Login_RegistroService],
+  providers: [Login_RegistroService, ProductoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

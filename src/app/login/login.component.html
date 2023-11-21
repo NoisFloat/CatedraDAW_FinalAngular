@@ -9,31 +9,49 @@
 
   <h1 class="title">La bodeguita S.A de C.V</h1>
 
-  <!-- inputs -->
-  <form (ngSubmit)="verificarSesion()">
-    <!-- usuario -->
+<!-- Make sure you have included Bootstrap CSS in your project -->
+<link
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+  crossorigin="anonymous"
+/>
+
+<!-- inputs -->
+<form class="mt-4" (ngSubmit)="verificarSesion()">
+  <!-- usuario -->
+  <div class="form-group">
     <input
       type="text"
+      class="form-control"
       placeholder="Usuario"
       [(ngModel)]="nombre"
       name="nombre"
     />
-    <!-- contra -->
+  </div>
+
+  <!-- contra -->
+  <div class="form-group">
     <input
       type="password"
+      class="form-control"
       placeholder="Contraseña"
       [(ngModel)]="password"
       name="password"
     />
-    <!-- btn iniciar -->
-    <button
-      type="submit"
-      class="btnSesion"
-      id="iniciarSesionButton" (click)="redireccionarSegunSesion()"
-      [disabled]="!verificarSesion()"
-    >
-      Iniciar Sesión
-    </button>
-  </form>
+  </div>
+
+  <!-- btn iniciar -->
+  <button
+    type="submit"
+    class="btn btn-primary"
+    id="iniciarSesionButton"
+    (click)="redireccionarSegunSesion()"
+    [disabled]="!verificarSesion()"
+  >
+    Iniciar Sesión
+  </button>
+</form>
+
 </section>
 <app-footer></app-footer>

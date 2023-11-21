@@ -1,7 +1,7 @@
 <!-- nombre-del-componente.component.html -->
 
-<form #formulario="ngForm">
-  <div>
+<form (submit)="registrarProducto()" class="formulario-bootstrap" style="background-color: #8a2be2; padding: 20px; border-radius: 10px;">
+  <div class="form-group">
     <label for="producto">Producto:</label>
     <input
       type="text"
@@ -9,10 +9,11 @@
       name="producto"
       [(ngModel)]="titulo"
       required
+      class="form-control"
     />
   </div>
 
-  <div>
+  <div class="form-group">
     <label for="precio">Precio:</label>
     <input
       type="number"
@@ -20,29 +21,32 @@
       name="precio"
       [(ngModel)]="precio"
       required
+      class="form-control"
     />
   </div>
 
-  <div>
+  <div class="form-group">
     <label for="cantidadVendidas">Cant. Vendidas:</label>
     <input
-      type="text"
+      type="number"
       id="cantidadVendidas"
       name="cantidadVendidas"
       [(ngModel)]="descripcion"
       required
+      class="form-control"
     />
   </div>
 
-  <div>
+  <div class="form-group">
     <label for="descripcion">Descripción:</label>
     <textarea
       id="descripcion"
       name="descripcion"
       [(ngModel)]="categoria"
       required
+      class="form-control"
     ></textarea>
   </div>
 
-  <button type="submit">Agregar Producto</button>
+  <button type="submit" class="btn btn-primary">Agregar Producto</button>
 </form>
